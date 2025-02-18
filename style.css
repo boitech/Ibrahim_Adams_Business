@@ -1,11 +1,10 @@
+/* General Styles */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #ffffff;
-  min-height: 100vh;
-  background-size: cover;
 }
 
 .container {
@@ -14,30 +13,48 @@ body {
   padding: 20px;
 }
 
+/* Header */
 .header {
   text-align: center;
   padding: 20px;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-.header h1 {
-  margin: 0;
-  font-size: 2.5em;
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-nav a {
-  margin: 0 15px;
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav a:hover {
+.nav-links a:hover {
   text-shadow: 0 0 10px #ffffff;
 }
 
+/* Box Sections */
 .box {
   background: rgba(255, 255, 255, 0.1);
   padding: 30px;
@@ -46,13 +63,8 @@ nav a:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-h2 {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.service {
+/* Services and Work */
+.service, .work-item {
   margin-bottom: 20px;
   padding: 15px;
   background: rgba(255, 255, 255, 0.2);
@@ -60,40 +72,47 @@ h2 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-button {
-  padding: 10px 20px;
-  background: #00c6ff;
-  color: white;
-  border: none;
+.work-item img {
+  width: 100%;
+  height: auto;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
-button:hover {
-  background: #007acc;
+/* Social Media */
+.social-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul li a {
-  color: #00c6ff;
-  text-decoration: none;
-  font-size: 1.2em;
-}
-
-ul li a:hover {
-  text-shadow: 0 0 8px #00c6ff;
-}
-
+/* Footer */
 .footer {
   text-align: center;
   padding: 20px;
   margin-top: 20px;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    left: 0;
+    top: 100%;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
