@@ -6,7 +6,73 @@ body {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #ffffff;
 }
+/* General Styles */
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  position: relative;
+}
+
+.menu-toggle {
+  font-size: 2em;
+  cursor: pointer;
+  color: #ffffff;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: none; /* Hide menu by default */
+  flex-direction: column;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-links.show {
+  display: flex; /* Show menu when toggled */
+}
+
+.nav-links li {
+  margin: 10px 0;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  display: block;
+}
+
+.nav-links a:hover {
+  text-shadow: 0 0 10px #ffffff;
+}
+
+/* Box Sections */
+.box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
