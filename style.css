@@ -7,7 +7,7 @@ body {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #ffffff;
 }
-/* General Styles */
+/* General Styles 
 
 .container {
   max-width: 1200px;
@@ -15,7 +15,7 @@ body {
   padding: 20px;
 }
 
-/* Header */
+/* Header 
 .header {
   text-align: center;
   padding: 20px;
@@ -32,7 +32,7 @@ body {
   top: 20px;
   right: 20px;
 }
-
+*/
 .nav-links {
   list-style: none;
   display: none; /* Hide menu by default */
