@@ -9,83 +9,85 @@
 </head>
 <body>
   <div class="container">
+    <!-- Header -->
     <header class="header">
       <h1>Ibrahim Adams Business Centre</h1>
       <nav id="navbar">
-        <div class="container" onclick="toggleMenu()">&#9776;</div>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
         <ul class="nav-links">
           <li><a href="#services">Services</a></li>
-          <li><a href="#work">View Our Work</a></li>
+          <li><a href="#work">Our Work</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
       </nav>
     </header>
 
+    <!-- Intro Section -->
     <section id="intro" class="box">
       <h2>Welcome to Ibrahim Adams Business Centre</h2>
       <p>Your digital solution for WhatsApp bots, web development, and full-service design. Explore our services to grow your business!</p>
     </section>
+
+    <!-- Services Section -->
     <section id="services" class="box">
       <h2>Our Services</h2>
-      <div class="service">
-        <h3>WhatsApp Bot - 100 KSH</h3>
-        <p>Customized bots to enhance your business operations.</p>
-        <button onclick="redirectToWhatsApp()">Buy Now</button>
-      </div>
-      <div class="service">
-        <h3>Website Development</h3>
-        <p>We build websites based on your needs and preferences.</p>
-        <button onclick="redirectToWhatsApp()">Buy Now</button>
-      </div>
-      <div class="service">
-        <h3>Full Bot Design</h3>
-        <p>Comprehensive bot solutions tailored to your business goals.</p>
-        <button onclick="redirectToWhatsApp()">Buy Now</button>
+      <div class="service-grid">
+        <div class="service">
+          <h3>WhatsApp Bot - 100 KSH</h3>
+          <p>Customized bots to enhance your business operations.</p>
+          <button class="btn-glow" onclick="redirectToWhatsApp()">Buy Now</button>
+        </div>
+        <div class="service">
+          <h3>Website Development</h3>
+          <p>We build websites based on your needs and preferences.</p>
+          <button class="btn-glow" onclick="redirectToWhatsApp()">Buy Now</button>
+        </div>
+        <div class="service">
+          <h3>Full Bot Design</h3>
+          <p>Comprehensive bot solutions tailored to your business goals.</p>
+          <button class="btn-glow" onclick="redirectToWhatsApp()">Buy Now</button>
+        </div>
       </div>
     </section>
 
+    <!-- Our Work Section -->
     <section id="work" class="box">
       <h2>View Our Work</h2>
-      <div class="work-item">
-        <img src="https://files.catbox.moe/6de4uv.webp" alt="Website Screenshot 1">
-        <p>Customer website screenshot</p>
-      </div>
-      <div class="work-item">
-        <img src="https://files.catbox.moe/nmoxap.jpeg" alt="Website Screenshot 2">
-        <p>Customer website screenshot</p>
-      </div>
-      <div class="work-item">
-        <img src="https://files.catbox.moe/vr98pw.jpeg">
-        <p>Customer website screenshot</p>
-      </div>
-      <div class="work-item">
-        <img src="https://files.catbox.moe/vdhlky.jpg">
-        <p>WhatsApp bot screenshot </p>
+      <div class="work-grid">
         <div class="work-item">
-        <img src="https://files.catbox.moe/ow3fhg.jpg">
-        <p>We can do anything just contact us</p>
+          <img src="https://files.catbox.moe/6de4uv.webp" alt="Website Screenshot 1">
+          <p>Customer website screenshot</p>
         </div>
         <div class="work-item">
-        <h3>View our bot web</h3>
-        <button onclick="redirectToWhatsAppweb()">Open</button>
-              </div>
-        <div class="work-item">
-        <h3>Follow our channel for free updates</h3>
-        <button onclick="redirectToWhatsAppchnannel()">Open</button>
+          <img src="https://files.catbox.moe/nmoxap.jpeg" alt="Website Screenshot 2">
+          <p>Customer website screenshot</p>
         </div>
+        <div class="work-item">
+          <img src="https://files.catbox.moe/vr98pw.jpeg" alt="Website Screenshot 3">
+          <p>Customer website screenshot</p>
+        </div>
+        <div class="work-item">
+          <img src="https://files.catbox.moe/vdhlky.jpg" alt="WhatsApp Bot Screenshot">
+          <p>WhatsApp bot screenshot</p>
+        </div>
+      </div>
+      <div class="work-cta">
+        <button class="btn-glow" onclick="redirectToWhatsAppweb()">View Our Bot Web</button>
+        <button class="btn-glow" onclick="redirectToWhatsAppchannel()">Follow Our Channel</button>
       </div>
     </section>
 
+    <!-- About Us Section -->
     <section id="about" class="box">
       <h2>About Us</h2>
       <p>Ibrahim Adams Business Centre is dedicated to offering professional digital services. Whether you need a bot, a website, or a complete business solution, we are here to help you succeed!</p>
     </section>
 
+    <!-- Contact Us Section -->
     <section id="contact" class="box">
       <h2>Contact Us</h2>
-      <ul>
-        
+      <ul class="social-links">
         <li><a href="https://wa.me/message/74F2PC4JA4F3P1" target="_blank">
           <img src="https://files.catbox.moe/4qiuac.jpg" alt="WhatsApp" class="social-icon"> WhatsApp
         </a></li>
@@ -99,17 +101,18 @@
           <img src="https://files.catbox.moe/eqh177.png" alt="Twitter" class="social-icon"> Twitter
         </a></li>
         <li><a href="https://t.me/ibraahadams" target="_blank">
-          <img src="https://files.catbox.moe/2zja9w.png" alt="Twitter" class="social-icon"> Telegram 
+          <img src="https://files.catbox.moe/2zja9w.png" alt="Telegram" class="social-icon"> Telegram
         </a></li>
         <li><a href="https://www.youtube.com/@ibrahimaitech" target="_blank">
-          <img src="https://files.catbox.moe/7h2dqv.jpg" alt="Twitter" class="social-icon"> YouTube 
+          <img src="https://files.catbox.moe/7h2dqv.jpg" alt="YouTube" class="social-icon"> YouTube
         </a></li>
         <li><a href="https://tiktok.com/@ibrahimai_adams" target="_blank">
-          <img src="https://files.catbox.moe/r32c8f.png" alt="Twitter" class="social-icon"> TikTok 
+          <img src="https://files.catbox.moe/r32c8f.png" alt="TikTok" class="social-icon"> TikTok
         </a></li>
       </ul>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
       <p>&copy; 2025 Ibrahim Adams Business Centre. All rights reserved.</p>
     </footer>
