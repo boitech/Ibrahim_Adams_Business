@@ -4,90 +4,318 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ibrahim Adams Business Centre</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1, h2, h3 {
+      color: #ffd700;
+    }
+
+    a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ffa500;
+    }
+
+    /* Header and Navigation */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    #navbar {
+      display: flex;
+      align-items: center;
+    }
+
+    #navbar .container {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    .nav-links a {
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffa500;
+    }
+
+    /* Hamburger Menu for Mobile */
+    @media (max-width: 768px) {
+      #navbar .container {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+    }
+
+    /* Sections */
+    .box {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    /* Service Buttons */
+    .service button {
+      background: #ffd700;
+      color: #1e3c72;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .service button:hover {
+      background: #ffa500;
+      transform: scale(1.05);
+    }
+
+    /* Work Section */
+    .work-item {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .work-item img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Contact Section */
+    #contact ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    #contact li {
+      margin: 10px;
+    }
+
+    #contact a {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    #contact a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .social-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+
+    function redirectToWhatsApp() {
+      window.location.href = 'https://wa.me/message/74F2PC4JA4F3P1';
+    }
+
+    function redirectToWhatsAppweb() {
+      window.location.href = 'https://www.ibrahimadams.site/';
+    }
+
+    function redirectToWhatsAppchnannel() {
+      window.location.href = 'https://whatsapp.com/channel/0029VaZuGSxEawdxZK9CzM0Y';
+    }
+  </script>
 </head>
 <body>
   <div class="container">
-    <!-- Header -->
     <header class="header">
       <h1>Ibrahim Adams Business Centre</h1>
       <nav id="navbar">
-        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <div class="container" onclick="toggleMenu()">&#9776;</div>
         <ul class="nav-links">
           <li><a href="#services">Services</a></li>
-          <li><a href="#work">Our Work</a></li>
+          <li><a href="#work">View Our Work</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- Intro Section -->
     <section id="intro" class="box">
       <h2>Welcome to Ibrahim Adams Business Centre</h2>
       <p>Your digital solution for WhatsApp bots, web development, and full-service design. Explore our services to grow your business!</p>
     </section>
 
-    <!-- Services Section -->
     <section id="services" class="box">
       <h2>Our Services</h2>
-      <div class="service-grid">
-        <div class="service">
-          <h3>WhatsApp Bot - 100 KSH</h3>
-          <p>Customized bots to enhance your business operations.</p>
-          <button class="btn-glow" onclick="redirectToWhatsApp()">Buy Now</button>
-        </div>
-        <div class="service">
-          <h3>Website Development</h3>
-          <p>We build websites based on your needs and preferences.</p>
-          <button class="btn-glow" onclick="redirectToWhatsApp()">Buy Now</button>
-        </div>
-        <div class="service">
-          <h3>Full Bot Design</h3>
-          <p>Comprehensive bot solutions tailored to your business goals.</p>
-          <button class="btn-glow" onclick="redirectToWhatsApp()">Buy Now</button>
-        </div>
+      <div class="service">
+        <h3>WhatsApp Bot - 100 KSH</h3>
+        <p>Customized bots to enhance your business operations.</p>
+        <button onclick="redirectToWhatsApp()">Buy Now</button>
+      </div>
+      <div class="service">
+        <h3>Website Development</h3>
+        <p>We build websites based on your needs and preferences.</p>
+        <button onclick="redirectToWhatsApp()">Buy Now</button>
+      </div>
+      <div class="service">
+        <h3>Full Bot Design</h3>
+        <p>Comprehensive bot solutions tailored to your business goals.</p>
+        <button onclick="redirectToWhatsApp()">Buy Now</button>
       </div>
     </section>
 
-    <!-- Our Work Section -->
     <section id="work" class="box">
       <h2>View Our Work</h2>
-      <div class="work-grid">
-        <div class="work-item">
-          <img src="https://files.catbox.moe/6de4uv.webp" alt="Website Screenshot 1">
-          <p>Customer website screenshot</p>
-        </div>
-        <div class="work-item">
-          <img src="https://files.catbox.moe/nmoxap.jpeg" alt="Website Screenshot 2">
-          <p>Customer website screenshot</p>
-        </div>
-        <div class="work-item">
-          <img src="https://files.catbox.moe/vr98pw.jpeg" alt="Website Screenshot 3">
-          <p>Customer website screenshot</p>
-        </div>
-        <div class="work-item">
-          <img src="https://files.catbox.moe/vdhlky.jpg" alt="WhatsApp Bot Screenshot">
-          <p>WhatsApp bot screenshot</p>
-        </div>
+      <div class="work-item">
+        <img src="https://files.catbox.moe/6de4uv.webp" alt="Website Screenshot 1">
+        <p>Customer website screenshot</p>
       </div>
-      <div class="work-cta">
-        <button class="btn-glow" onclick="redirectToWhatsAppweb()">View Our Bot Web</button>
-        <button class="btn-glow" onclick="redirectToWhatsAppchannel()">Follow Our Channel</button>
+      <div class="work-item">
+        <img src="https://files.catbox.moe/nmoxap.jpeg" alt="Website Screenshot 2">
+        <p>Customer website screenshot</p>
+      </div>
+      <div class="work-item">
+        <img src="https://files.catbox.moe/vr98pw.jpeg">
+        <p>Customer website screenshot</p>
+      </div>
+      <div class="work-item">
+        <img src="https://files.catbox.moe/vdhlky.jpg">
+        <p>WhatsApp bot screenshot</p>
+      </div>
+      <div class="work-item">
+        <img src="https://files.catbox.moe/ow3fhg.jpg">
+        <p>We can do anything just contact us</p>
+      </div>
+      <div class="service">
+        <h3>View our bot web</h3>
+        <button onclick="redirectToWhatsAppweb()">Open</button>
+      </div>
+      <div class="service">
+        <h3>Follow our channel for free updates</h3>
+        <button onclick="redirectToWhatsAppchnannel()">Open</button>
       </div>
     </section>
 
-    <!-- About Us Section -->
     <section id="about" class="box">
       <h2>About Us</h2>
       <p>Ibrahim Adams Business Centre is dedicated to offering professional digital services. Whether you need a bot, a website, or a complete business solution, we are here to help you succeed!</p>
     </section>
 
-    <!-- Contact Us Section -->
     <section id="contact" class="box">
       <h2>Contact Us</h2>
-      <ul class="social-links">
+      <ul>
         <li><a href="https://wa.me/message/74F2PC4JA4F3P1" target="_blank">
           <img src="https://files.catbox.moe/4qiuac.jpg" alt="WhatsApp" class="social-icon"> WhatsApp
         </a></li>
@@ -112,7 +340,6 @@
       </ul>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
       <p>&copy; 2025 Ibrahim Adams Business Centre. All rights reserved.</p>
     </footer>
