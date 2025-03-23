@@ -1,14 +1,21 @@
-function redirectToWhatsApp() {
-  window.open("https://wa.me/message/74F2PC4JA4F3P1", "_blank");
-}
-function redirectToWhatsAppchnannel() {
-  window.open("https://whatsapp.com/channel/0029VaZuGSxEawdxZK9CzM0Y", "_blank");
-}
-function redirectToWhatsAppweb() {
-  window.open("https://www.ibrahimadams.site/", "_blank");
+
+
+
+// Toggle Menu for Mobile
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
 }
 
-function toggleMenu() {
-  const navLinks = document.querySelector(".nav-links");
-  navLinks.classList.toggle("show");
+// Redirect Functions
+function redirectToWhatsApp() {
+  window.location.href = 'https://wa.me/message/74F2PC4JA4F3P1';
+}
+
+function redirectToWhatsAppweb() {
+  window.location.href = 'https://whatsapp.com/channel/0029VaZuGSxEawdxZK9CzM0Y';
+}
+
+function redirectToWhatsAppchannel() {
+  window.location.href = 'https://www.ibrahimadams.site/';
 }
